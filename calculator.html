@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Calligraffitti" rel="stylesheet"> 
+<center> <img src="Calc.jpg" height="250" width="400"> </center>
+<head>
+
+<title> Calc </title>
+
+</head>
+
+<body>
+
+<h1> BEST CALCULATOR EVER </h1>
+
+<div id="calc">
+<form name="Calc">
+ <center><table border="2">
+
+	<tr>
+ 	<td colspan="4"><input type="text" id="screen" name="input" size="50"> </td>
+ 	</tr>
+
+ 	<tr>
+ 	<td> <input type="button" name="uno" value="1" onclick="Calc.input.value+='1'"> </td>
+ 	<td> <input type="button" name="dos" value="2" onclick="Calc.input.value+='2'"> </td>
+ 	<td> <input type="button" name="tres" value="3" onclick="Calc.input.value+='3'"> </td>
+ 	<td> <input type="button" name="+" value="GAINZ" onclick="Calc.input.value+='+'"> </td>
+ 	</tr>
+
+ 	<tr>
+	<td> <input type="button" name="cuatro" value="4" onclick="Calc.input.value+='4'"> </td>
+	<td> <input type="button" name="cinco" value="5" onclick="Calc.input.value+='5'"> </td>
+	<td> <input type="button" name="seis" value="6" onclick="Calc.input.value+='6'"> </td>
+	<td> <input type="button" name="-" value="LOSES" onclick="Calc.input.value+='-'"> </td>
+ 	</tr>
+
+ 	<tr>
+	<td> <input type="button" name="siete" value="7" onclick="Calc.input.value+='7'"> </td>
+	<td> <input type="button" name="ocho" value="8" onclick="Calc.input.value+='8'"> </td>
+	<td> <input type="button" name="nueve" value="9" onclick="Calc.input.value+='9'"> </td>
+	<td> <input type="button" name="*" value="MULTIPLY" onclick="Calc.input.value+='*'"> </td>
+	</tr>
+
+	<tr>
+	<td> <input type="button" name="cero" value="0" onclick="Calc.input.value+='0'"> </td>
+	<td> <input type="button" name="." value="." onclick="Calc.input.value+='.'"> </td>
+	<td> <input type="button" name="yes" value="ENTER" onclick="Calc.input.value=eval(Calc.input.value)"> </td>
+	<td> <input type="button" name="/" value="DIVIDE" onclick="Calc.input.value+='/'"> </td>
+	</tr>
+
+	<tr>
+	<td> <input type="button" name="clear" value="BYE" onclick="Calc.input.value=''"> </td>
+	<td> <input type="button" name="clear" value="AVERAGE" onclick="average()"> </td>
+	<div id="lol">
+	<td colspan="2">
+	<img src="geek.jpg" style="width:200px; height:90px;"> </img>
+	</div>
+	</td>
+	</tr>
+	</center>
+	</table>
+	</div>
+<script type="text/javascript">
+function average ()
+{
+	var number = document.getElementById("screen").value;
+	var array = number.split('+');
+	var total = 0;
+	for (var i=0; i<array.length; i++){
+		total+=Number(array[i]);
+	}
+	var avg = total/array.length;
+	document.getElementById("screen").value = avg;
+}
+</script>
+<style type="text/css">
+body {
+	background-image: url("pie.jpg");
+	background-size: 1500px 1000px;
+	background-repeat: no-repeat;
+	font-family: 'Calligraffitti', cursive;
+}
+h1 {
+	color:red;
+	text-align: center;
+}
+#screen {
+	width: 470px;
+}
+table {
+	margin: 10px;
+	padding: 0px;
+	width: 300px;
+}
+td{
+	width: 150px;
+	height: 70px;
+	font-weight: bold;
+}
+td:hover {
+   background-color: #b0c4de;
+   opacity:.5;
+}
+input  {
+	position: center;
+	border-radius: 10px;
+	font-family: 'Calligraffitti', cursive;
+	font-size: 12pt;
+	height: 60px;
+	width: 100px;
+	background-color: pink;
+}
+</style>
+
+
+</body>
+</html>
